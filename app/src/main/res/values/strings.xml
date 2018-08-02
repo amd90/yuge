@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">yuge</string>
-    <string name="count_label">You\'ve Yuged xx times</string>
+    <string name="count_label">You\'ve Yuged 0 times</string>
 </resources>

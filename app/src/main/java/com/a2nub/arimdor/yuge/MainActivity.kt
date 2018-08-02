@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private lateinit var lblCounter: TextView
     private lateinit var btnSensor: Button
     private val toasty: Toast by lazy { Toast.makeText(this, "YUGE!", Toast.LENGTH_SHORT) }
-    private val toastySensor: Toast by lazy { Toast.makeText(this, "Sensor Changed!", Toast.LENGTH_SHORT) }
 
     private var counter = 0
     private var flagSensor = false
@@ -49,8 +48,13 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
         yugePhoto.setOnClickListener { yuge() }
         btnSensor.setOnClickListener {
-            flagSensor = true;
-            toastySensor.show()
+            if (!flagSensor) {
+                flagSensor = true
+                Toast.makeText(this, "Sensor ON", Toast.LENGTH_SHORT).show()
+            } else {
+                flagSensor = false
+                Toast.makeText(this, "Sensor OFF", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -77,7 +81,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     }
 
     override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
-        return
+
     }
 
     override fun onSensorChanged(p0: SensorEvent?) {
