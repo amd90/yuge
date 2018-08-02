@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    tools:context="amd.nrk.yuge.MainActivity">
+
+
+    <TextView
+        android:textColor="@color/colorWhite"
+        android:id="@+id/tvYugeCounter"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        tools:text="You've Yuged xx times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/yugeView"
+        android:background="@drawable/yuge2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/btnSensor"
+            android:layout_marginTop="10dp"
+            android:tint="@color/colorWhite"
+            android:src="@drawable/ic_sensor"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/btnChallenge"
+            android:layout_marginTop="10dp"
+            android:tint="@color/colorWhite"
+            android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/btnVersus"
+            android:layout_marginTop="10dp"
+            android:tint="@color/colorWhite"
+            android:src="@drawable/ic_vs"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+    </LinearLayout>
+
+</LinearLayout>
